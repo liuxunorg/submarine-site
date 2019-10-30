@@ -21,5 +21,4 @@ limitations under the License.
 
 # Apache Submarine Documentation
  
-  * [Zeppelin 0.8.0](docs/0.3.0)
-  * [Zeppelin 0.7.3](docs/0.2.0)
+  * [Submarine 0.3.0](docs/0.3.0)

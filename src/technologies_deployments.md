@@ -19,7 +19,7 @@ limitations under the License.
       <div class="border col-md-4 col-sm-4" style="height:200px;">
         <div class="panel-content">
           <label class="_default-text" style="margin-top: 20px;">
-            <img src="./assets/themes/zeppelin/img/yarn-k8s.png" width="290px">
+            <img src="./assets/themes/submarine/img/yarn-k8s.png" width="290px">
           </label>
           <label class="_hover-text">
             <div style="min-height:140px; padding: 20px 10px 10px 10px;">
@@ -32,7 +32,7 @@ limitations under the License.
        <div class="border col-md-4 col-sm-4" style="height:200px;">
          <div class="panel-content">
            <label class="_default-text" style="margin-top: 20px;">
-             <img src="./assets/themes/zeppelin/img/tf-pytorch.png" width="290px">
+             <img src="./assets/themes/submarine/img/tf-pytorch.png" width="290px">
            </label>
            <label class="_hover-text">
              <div style="min-height:140px; padding: 20px 10px 10px 10px;">
@@ -45,7 +45,7 @@ limitations under the License.
       <div class="border col-md-4 col-sm-4" style="height:200px;">
         <div class="panel-content">
           <label class="_default-text" style="margin-top:20px;">
-            <img src="./assets/themes/zeppelin/img/spark-flink.png" width="290px">
+            <img src="./assets/themes/submarine/img/spark-flink.png" width="290px">
           </label>
           <label class="_hover-text">
             <div style="min-height:140px; padding: 10px;">
@@ -88,7 +88,7 @@ limitations under the License.
             </div>
           </label>
           <label class="content-text">
-            Zeppelin supports Multi-user Support w/ LDAP. Let's configure Zeppelin for your yarn cluster.<br/>
+            Submarine supports Multi-user Support w/ LDAP. Let's configure Submarine for your yarn cluster.<br/>
             <a href="/docs/0.7.2/security/shiroauthentication.html" class="user-button">LEARN MORE</a>
           </label>                 
         </div>

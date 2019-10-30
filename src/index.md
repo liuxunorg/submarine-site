@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Submarine
+title: Apache Submarine
 tagline: Less Development, More analysis!
 ---
 <!--
@@ -37,17 +37,17 @@ limitations under the License.
     </ul>
   </div>
   <div class="col-md-6" style="padding:0">
-    <img class="img-responsive" style="border: 1px solid #ecf0f1;" src="./assets/themes/zeppelin/img/notebook.png" />
+    <img class="img-responsive" style="border: 1px solid #ecf0f1;" src="./assets/themes/submarine/img/notebook.png" />
   </div>
 </div>
 
 <br />
 ## 100% Opensource
 
-<img class="img-responsive" style="margin:0 auto; padding: 15px;" src="./assets/themes/zeppelin/img/asf_logo.png" width="250px"/>
+<img class="img-responsive" style="margin:0 auto; padding: 15px;" src="./assets/themes/submarine/img/asf_logo.png" width="250px"/>
 
-Apache Submarine is Apache2 Licensed software. Please check out the [source repository](http://git.apache.org/zeppelin.git) and [how to contribute](./docs/latest/development/howtocontribute.html).
+Apache Submarine is Apache2 Licensed software. Please check out the [source repository](http://git.apache.org/submarine.git) and [how to contribute](./docs/latest/development/howtocontribute.html).
 Apache Submarine has a very active development community.
-Join to our [Mailing list](https://zeppelin.apache.org/community.html) and report issues on [Jira Issue tracker](https://issues.apache.org/jira/browse/ZEPPELIN).
+Join to our [Mailing list](https://submarine.apache.org/community.html) and report issues on [Jira Issue tracker](https://issues.apache.org/jira/browse/SUBMARINE).
 </div>
 <br />

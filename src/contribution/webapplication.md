@@ -21,18 +21,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-# Contributing to Zeppelin-Web
+# Contributing to Submarine-Web
 
 ## Dev Mode
-When working on Zeppelin's WebApplication, it is recommended to run in dev mode.
+When working on Submarine's WebApplication, it is recommended to run in dev mode.
 
-For that, start Zeppelin server normally, then use ``yarn run dev`` in _zeppelin-web_ directory.
+For that, start Submarine server normally, then use ``yarn run dev`` in _zeppelin-web_ directory.
 
-This will launch a Zeppelin WebApplication on port **9000** that will update on code changes.
+This will launch a Submarine WebApplication on port **9000** that will update on code changes.
 
 ## Technologies
 
-Zeppelin WebApplication is using **AngularJS** as main Framework, and **Grunt** and **Bower** as helpers.
+Submarine WebApplication is using **AngularJS** as main Framework, and **Grunt** and **Bower** as helpers.
 
 So you might want to get familiar with it.
 [Here is a good start](http://www.sitepoint.com/kickstart-your-angularjs-development-with-yeoman-grunt-and-bower/)
@@ -62,7 +62,7 @@ If you still need to use it, then please use ``angular.element()`` instead of ``
 
 ## Folder Structure & Code Organization
 
-* `src` folder: Contains the Source code for Zeppelin WebApplication
+* `src` folder: Contains the Source code for Submarine WebApplication
 * `dist` folder: Contains the compiled code after using **yarn run build**
 
 ### Src and Code Organization

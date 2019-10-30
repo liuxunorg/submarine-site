@@ -25,16 +25,16 @@ Here you will find links and informations regarding the Apache Submarine logo
 
 <div style="text-align:center;">
   <div class="logopage_container">
-    <img src="/assets/themes/zeppelin/img/submarine_black_256.png" width="200" alt="zeppelin" />
+    <img src="/assets/themes/submarine/img/submarine_black_256.png" width="200" alt="submarine" />
   </div>
 
   <div class="logopage_container" style="text-align:left">
     <div>Font used: <a href="https://www.google.com/fonts/specimen/Patua%20One">Patua One</a></div>
-    <div><a href="/assets/themes/zeppelin/img/submarine_black_white_256.png">black white PNG format</a></div>
-    <div><a href="/assets/themes/zeppelin/img/submarine_black_256.png">black NG format</a></div>
-    <div><a href="/assets/themes/zeppelin/img/submarine_white_256.png">white PNG format</a></div>
-    <div><a href="/assets/themes/zeppelin/img/submarine_blue_256.png">blue PNG format</a></div>
-    <div><a href="/assets/themes/zeppelin/img/submarine_logo.psd">PSD format</a></div>
-    <div><a href="/assets/themes/zeppelin/img/submarine_logo.svg">SVG format</a></div>
+    <div><a href="/assets/themes/submarine/img/submarine_black_white_256.png">black white PNG format</a></div>
+    <div><a href="/assets/themes/submarine/img/submarine_black_256.png">black NG format</a></div>
+    <div><a href="/assets/themes/submarine/img/submarine_white_256.png">white PNG format</a></div>
+    <div><a href="/assets/themes/submarine/img/submarine_blue_256.png">blue PNG format</a></div>
+    <div><a href="/assets/themes/submarine/img/submarine_logo.psd">PSD format</a></div>
+    <div><a href="/assets/themes/submarine/img/submarine_logo.svg">SVG format</a></div>
   </div>
 </div>

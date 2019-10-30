@@ -21,14 +21,14 @@ limitations under the License.
 
 # Contribution Guidelines
 
-**Apache Submarine** is an [Apache2 License](https://github.com/apache/zeppelin/blob/master/CONTRIBUTING.md) Software.
+**Apache Submarine** is an [Apache2 License](https://github.com/apache/submarine/blob/master/CONTRIBUTING.md) Software.
 
 Contributing to Zeppelin (Source code, Documents, Image, Website) means you agree to the Apache2 License.
 
 1. Make sure your issue is not already in the [Jira issue tracker](https://issues.apache.org/jira/browse/ZEPPELIN)
 2. If not, create a ticket describing the change you're proposing in the [Jira issue tracker](https://issues.apache.org/jira/browse/ZEPPELIN)
 3. Setup travis [Continuous Integration](#continuous-integration)
-4. Contribute your patch via Pull Request on our [Github Mirror](https://github.com/apache/zeppelin).
+4. Contribute your patch via Pull Request on our [Github Mirror](https://github.com/apache/submarine).
 
 Before you start, please read the [Code of Conduct](http://www.apache.org/foundation/policies/conduct.html) carefully, familiarize yourself with it and refer to it whenever you need it.
 
@@ -41,7 +41,7 @@ Filling it thoroughly can improve the speed of the review process.
 
     ### What is this PR for?
     A few sentences describing the overall goals of the pull request's commits.
-    First time? Check out the contribution guidelines - https://zeppelin.apache.org/contribute.html
+    First time? Check out the contribution guidelines - https://submarine.apache.org/contribute.html
 
     ### What type of PR is it?
     [Bug Fix | Improvement | Feature | Documentation | Hot Fix | Refactoring]
@@ -50,8 +50,8 @@ Filling it thoroughly can improve the speed of the review process.
     * [ ] - Task
 
     ### What is the Jira issue?
-    * Open an issue on Jira https://issues.apache.org/jira/browse/ZEPPELIN/
-    * Put link here, and add [ZEPPELIN-*Jira number*] in PR title, eg. [ZEPPELIN-533]
+    * Open an issue on Jira https://issues.apache.org/jira/browse/SUBMARINE/
+    * Put link here, and add [SUBMARINE-*Jira number*] in PR title, eg. [SUBMARINE-533]
 
     ### How should this be tested?
     Outline the steps to test the PR here.
@@ -66,7 +66,7 @@ Filling it thoroughly can improve the speed of the review process.
 ## Testing a Pull Request
 You can also test and review a particular Pull Request. Here are two useful ways.
 
-* Using a utility provided from Zeppelin.
+* Using a utility provided from Submarine.
 
     ```
     dev/test_zeppelin_pr.py [# of PR]

@@ -65,7 +65,7 @@ limitations under the License.
     </div>
     <div class="col-md-12 col-sm-12 col-xs-12 text-center">
       <p style="text-align:center; margin-top: 32px; font-size: 14px; color: gray; font-weight: 200; font-style: italic; padding-bottom: 0;">See more details in 
-        <a href="./releases/zeppelin-release-0.8.0.html">0.8 Release Note</a>
+        <a href="./releases/submarine-release-0.3.0.html">0.3.0 Release Note</a>
       </p>
     </div>
   </div>

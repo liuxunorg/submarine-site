@@ -44,7 +44,7 @@ limitations under the License.
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12 text-center twitterBtn">
         <p style="text-align:center; margin-top: 32px; font-size: 12px; color: gray; font-weight: 200; font-style: italic; padding-bottom: 0;">See more posts or</p>
-        <a href="https://medium.com/apache-zeppelin-stories" target="_blank" class="btn btn-primary btn-lg round" role="button">
+        <a href="https://medium.com/apache-submarine-stories" target="_blank" class="btn btn-primary btn-lg round" role="button">
           Share your story at &nbsp;
           <i class="fa fa-medium fa-lg" aria-hidden="true"></i>
         </a>

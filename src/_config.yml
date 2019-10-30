@@ -15,7 +15,7 @@ title : Apache Submarine
 tagline: Simplify bigdata analytics
 author :
   name : The Apache Software Foundation
-  email : dev@zeppelin.apache.org
+  email : dev@submarine.apache.org
   github : apache
   twitter : ASF
   feedburner : feedname
@@ -28,7 +28,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://zeppelin.apache.org
+production_url : http://submarine.apache.org
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
@@ -105,7 +105,7 @@ JB :
         tracking_id : 'UA-45176241-2'
     google_universal : 
         tracking_id : 'UA-45176241-5'
-        domain : 'zeppelin.apache.org'
+        domain : 'submarine.apache.org'
     getclicky :
       site_id : 
     mixpanel :
