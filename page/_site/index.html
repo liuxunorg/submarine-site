@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Submarine</title>
+    
+    <meta name="author" content="The Apache Software Foundation">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="/assets/themes/zeppelin/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/zeppelin/css/style.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/zeppelin/css/syntax.css" rel="stylesheet"  type="text/css" media="screen" /> 
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/themes/zeppelin/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/themes/zeppelin/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/themes/zeppelin/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/assets/themes/zeppelin/img/favicon/favicon.ico">
+    <link rel="manifest" href="/assets/themes/zeppelin/img/favicon/manifest.json">
+    <link rel="mask-icon" href="/assets/themes/zeppelin/img/favicon/safari-pinned-tab.svg" color="#438bc9">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="/assets/themes/zeppelin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/themes/zeppelin/js/docs.js"></script>
+    <script src="/assets/themes/zeppelin/js/anchor.min.js"></script>
+    <script src="/assets/themes/zeppelin/js/moment.min.js"></script>
+    <script src="/assets/themes/zeppelin/js/helium.controller.js"></script>
+    <script src="/assets/themes/zeppelin/js/medium.controller.js"></script>
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+  </head>
+
+  <body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/assets/themes/zeppelin/img/submarine_white_logo.png" style="margin-top: -6px;" width="80" alt="I'm zeppelin">
+          <span style="margin-left: 0px;"> Apache Submarine </span>
+      </a>
+    </div>
+    <nav class="navbar-collapse collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/docs/0.3.0/quickstart/install.html">Quick Start</a></li>
+
+        <!-- Download -->
+        <li><a href="/download.html">Download</a></li>
+
+        <!-- Docs -->
+        <li class="docs">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Docs<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="title"><span><b>Release</b><span></li>
+            <li><a href="https://hadoop.apache.org/submarine/docs/0.2.0/Index/">0.2.0</a></li>
+            <li><a href="http://hadoop.apache.org/submarine/docs/">0.1.0</a></li>
+            <li role="separator" class="divider"></li>
+              <li class="title"><span><b>Snapshot&nbsp;(development)</b><span></li>
+            <li><a href="/docs/0.3.0-SNAPSHOT">0.3.0-SNAPSHOT</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/ecosystem/ecosystem.html">Ecosystem</a></li>
+
+        <li class="docs">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/community/member.html">Member</a></li>
+            <li><a href="/community/contributors.html">Contributors</a></li>
+            <li><a href="https://github.com/apache/submarine">GitHub</a></li>
+          </ul>
+        </li>
+          <!-- Apache -->
+        <li class="docs">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Apache<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.apache.org/foundation/how-it-works.html">Apache Software Foundation</a></li>
+            <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+            <li><a href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a></li>
+            <li><a href="/assets.html">Assets</a></li>
+            <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav><!--/.navbar-collapse -->
+  </div>
+</div>
+
+
+<div class="jumbotron">
+  <div class="container" style="padding-bottom: 5px; margin-top: -15px;">
+    <div>
+      <div class="zeppelin">
+        <div class="zeppelin2"></div>
+      </div>
+    </div>
+    <div style="margin-top: -250px; position: relative;">
+      <h1 class="zeppelin-title">Apache {Submarine}</h1>
+      <p class="description">
+        Submarine is a project which allows infra engineer / data scientist to run machine learning <br/>
+        unmodified Tensorflow or PyTorch programs on YARN or Kubernetes.
+      </p>
+    </div>
+    <div class="border row">
+      <div class="col-md-12 col-sm-12 col-xs-12 text-center newBtn" style="margin-top:8px;">
+        <a href="/docs/0.8.0/quickstart/install.html" class="btn btn-primary btn-lg" role="button"
+           style="margin:5px 25px 5px 25px;font-size:15px;">
+          GET STARTED
+        </a>
+        <a href="/download.html" class="btn btn-primary btn-lg" role="button"
+           style="margin:5px 25px 5px 25px;font-size:15px;">
+          DOWNLOAD
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+<div class="tech_deploy">
+  <div class="container">
+    <h2>Technologies</h2>
+    <div class="border row">
+      <div class="border col-md-4 col-sm-4" style="height:200px;">
+        <div class="panel-content">
+          <label class="_default-text" style="margin-top: 20px;">
+            <img src="./assets/themes/zeppelin/img/yarn-k8s.png" width="290px">
+          </label>
+          <label class="_hover-text">
+            <div style="min-height:140px; padding: 20px 10px 10px 10px;">
+              Submarine supports Yarn, Kubernetes, Docker with Resource Scheduling.
+            </div>
+            <a href="/docs/0.7.2/interpreter/spark.html" class="panel-button">USE NOW <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </label>                     
+        </div>
+      </div>
+       <div class="border col-md-4 col-sm-4" style="height:200px;">
+         <div class="panel-content">
+           <label class="_default-text" style="margin-top: 20px;">
+             <img src="./assets/themes/zeppelin/img/tf-pytorch.png" width="290px">
+           </label>
+           <label class="_hover-text">
+             <div style="min-height:140px; padding: 20px 10px 10px 10px;">
+               Submarine supports Python, Tensorflow, PyTorch with machine learning algorithm development.
+             </div>
+             <a href="/docs/0.7.2/interpreter/spark.html" class="panel-button">USE NOW <span class="glyphicon glyphicon-chevron-right"></span></a>
+           </label>
+         </div>
+       </div>
+      <div class="border col-md-4 col-sm-4" style="height:200px;">
+        <div class="panel-content">
+          <label class="_default-text" style="margin-top:20px;">
+            <img src="./assets/themes/zeppelin/img/spark-flink.png" width="290px">
+          </label>
+          <label class="_hover-text">
+            <div style="min-height:140px; padding: 10px;">
+              Submarine workbench supports Spark, Flink with data processing and model prediction processing.
+            </div>
+            <a href="/docs/0.7.2/interpreter/python.html" class="panel-button">USE NOW <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+      <p class="bottom-text">
+        See more details in Submarine more feature.
+        <a href="/docs/0.8.0-SNAPSHOT/manual/interpreters.html">LEARN MORE <span class="glyphicon glyphicon-chevron-right" style="font-size:15px;"></span></a>
+      </p>
+    </div>    
+    <hr />
+    <div class="border row">
+      <h2 style="padding-bottom: 8px;">Deployments</h2>
+      <div class="border col-md-6 col-sm-6">
+        <div class="panel-content-user">
+          <label style="width: 100%;">
+            <div style="position:relative;width:100%;text-align:center;">
+              <span class="user-icon fa fa-user"></span>
+              <span class="title-text">Single User</span>
+            </div>
+          </label>
+          <label class="content-text">
+            Local Spark, 6 Built-in visualizations, Display system, Dynamic form, Multiple backends are supported.<br/>
+            <a href="/docs/0.7.2/install/install.html" class="user-button">LEARN MORE</a>
+          </label>
+        </div>
+      </div>
+      <div class="border col-md-6 col-sm-6">
+        <div class="panel-content-user">
+          <label style="width: 100%;">
+            <div style="position:relative;width:100%;text-align:center;">
+              <span class="user-icon fa fa-users"></span>
+              <span class="title-text">Multi-User</span>
+            </div>
+          </label>
+          <label class="content-text">
+            Zeppelin supports Multi-user Support w/ LDAP. Let's configure Zeppelin for your yarn cluster.<br/>
+            <a href="/docs/0.7.2/security/shiroauthentication.html" class="user-button">LEARN MORE</a>
+          </label>                 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+
+<div class="new">
+  <div class="container">
+    <h2>What's new in</h2>
+    <span class="newZeppelin center-block">Apache Submarine 0.3</span>
+    <div class="border row">
+      <div class="border col-md-4 col-sm-4">
+        <h4>Python, improved</h4>
+        <div>
+          <p>
+            IPython interpreter provides comparable user experience like Jupyter Notebook. For the details, click <a href="./docs/0.8.0/interpreter/python.html#ipython-support">here</a>.
+          </p>
+        </div>
+      </div>
+      <div class="border col-md-4 col-sm-4">
+        <h4>Note improvements</h4>
+        <p>
+          This release includes <a href="./docs/0.8.0/usage/dynamic_form/intro.html#using-form-templates-scope-note">Note level dynamic form</a>, note revision comparator and ability to run paragraph sequentially, instead of simultaneous paragraph execution in previous releases.
+        </p>
+      </div>
+      <div class="border col-md-4 col-sm-4">
+        <h4>Inline configuration</h4>
+        <div class="personal">
+        <p>
+          Generic <a href="./docs/0.8.0/usage/interpreter/overview.html#generic-confinterpreter">ConfInterpreter</a> provide a way configure interpreter inside each note.
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="border row">
+      <div class="border col-md-4 col-sm-4">
+        <h4>Tab-key completion</h4>
+        <p>
+          Press `Tab` for code completion. (previous key combination `Ctrl+.` works as well)
+        </p>
+      </div>
+      <div class="border col-md-4 col-sm-4">
+        <h4>Interpreter lifecycle</h4>
+        <div>
+        <p>
+          Interpreter lifecycle manager automatically terminate interpreter process on idle timeout. So resources are released when they're not in use. See <a href="./docs/0.8.0/usage/interpreter/overview.html#interpreter-lifecycle-management">here</a> for more details.
+        </p>
+        </div>
+      </div>
+      <div class="border col-md-4 col-sm-4">
+        <h4>Helium online registry</h4>
+        <p>
+          This release includes online registry for Helium that can add custom visualization and more. <a href="./docs/0.8.0/development/helium/overview.html">learn more</a> about it.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+      <p style="text-align:center; margin-top: 32px; font-size: 14px; color: gray; font-weight: 200; font-style: italic; padding-bottom: 0;">See more details in 
+        <a href="./releases/zeppelin-release-0.8.0.html">0.8 Release Note</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <div class="content">
+      
+
+<!--<div class="hero-unit Submarine">
+  <h1> <small>Less Development, More analysis!</small></h1>
+</div>
+-->
+
+<div class="row">
+  <div class="col-md-12">
+    <!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<p><br />
+<h1 class="index-header">
+  What is Apache Submarine ?
+</h1></p>
+
+<p><br /><br /><br />
+<div class="row">
+  <div class="col-md-6" style="padding-right:0">
+    <h1 style="color:#4c555a">Multi-purpose Notebook</h1>
+    <p>
+      The Notebook is the place for all your needs
+    </p>
+    <ul style="list-style-type: none;padding-left:10px;" >
+      <li style="font-size:18px; margin: 5px;"><span class="glyphicon glyphicon-import" style="margin-right:10px"></span> Data Ingestion</li>
+      <li style="font-size:18px; margin: 5px;"><span class="glyphicon glyphicon-eye-open" style="margin-right:10px"></span> Data Discovery</li>
+      <li style="font-size:18px; margin: 5px;"><span class="glyphicon glyphicon-wrench" style="margin-right:10px"></span> Data Analytics</li>
+      <li style="font-size:18px; margin: 5px;"><span class="glyphicon glyphicon-dashboard" style="margin-right:10px"></span> Data Visualization &amp; Collaboration</li>
+    </ul>
+  </div>
+  <div class="col-md-6" style="padding:0">
+    <img class="img-responsive" style="border: 1px solid #ecf0f1;" src="./assets/themes/zeppelin/img/notebook.png" />
+  </div>
+</div></p>
+
+<p><br /></p>
+
+<h2>100% Opensource</h2>
+
+<p><img class="img-responsive" style="margin:0 auto; padding: 15px;" src="./assets/themes/zeppelin/img/asf_logo.png" width="250px"/></p>
+
+<p>Apache Submarine is Apache2 Licensed software. Please check out the <a href="http://git.apache.org/zeppelin.git">source repository</a> and <a href="./docs/latest/development/howtocontribute.html">how to contribute</a>.
+Apache Submarine has a very active development community.
+Join to our <a href="https://zeppelin.apache.org/community.html">Mailing list</a> and report issues on <a href="https://issues.apache.org/jira/browse/ZEPPELIN">Jira Issue tracker</a>.
+</div>
+<br /></p>
+
+  </div>
+</div>
+
+
+    </div>
+
+    
+
+
+    
+    <footer>
+      <!-- <p>&copy; 2019 The Apache Software Foundation</p>-->
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Apache Submarine 0.3.0 Documentation: Install</title>
+    <meta name="description" content="This page will help you get started and will guide you through installing Apache Submarine and running it in the command line.">
+    <meta name="author" content="The Apache Software Foundation">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le styles -->
+    <link href="/assets/themes/submarine/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/submarine/css/style.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/submarine/css/syntax.css" rel="stylesheet"  type="text/css" media="screen" /> 
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/assets/themes/submarine/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/themes/submarine/js/docs.js"></script>
+    <script src="/assets/themes/submarine/js/anchor.min.js"></script>
+    <script src="/assets/themes/submarine/js/toc.js"></script>
+    <script src="/assets/themes/submarine/js/lunr.min.js"></script>
+    <script src="/assets/themes/submarine/js/search.js"></script>    
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+  </head>
+
+  <body>
+    
+        <div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a class="navbar-brand-main" href="http://submarine.apache.org">
+              <img src="/assets/themes/submarine/img/submarine_white_logo.png" width="85"
+                   style="margin-top: -2px;" alt="Apache Submarine">
+              <span style="margin-left: 5px; font-size: 27px;">Submarine</span>
+              <a class="navbar-brand-version" href=""
+                 style="font-size: 15px; color: white;"> 0.3.0
+              </a>
+            </a>
+          </div>
+        </div>
+        <nav class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Quick Start <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="title"><span>Getting Started</span></li>
+                <li><a href="/quickstart/index.html">Quick Start Guide</a></li>
+                <li><a href="/quickstart/install.html">Install Submarine</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/quickstart/tensorflow_with_submarine.html">Tensorflow with Submarine</a></li>
+                <li><a href="/quickstart/pytorch_with_submarine.html">PyTorch with Submarine</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Usage<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Interpreter</span></li>
+                <li><a href="/usage/interpreter/overview.html">Overview</a></li>
+                <li><a href="/usage/interpreter/interpreter_binding_mode.html">Interpreter Binding Mode</a></li>
+                <li><a href="/usage/interpreter/user_impersonation.html">User Impersonation</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>REST API</span></li>
+                <li><a href="/usage/rest_api/submarine_server.html">Submarine Server API</a></li>
+                <li><a href="/usage/rest_api/configuration.html">Configuration API</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Other Features</span></li>
+                <li><a href="/usage/other_features/publishing_paragraphs.html">Publishing Paragraphs</a></li>
+                <li><a href="/usage/other_features/personalized_mode.html">Personalized Mode</a></li>
+                <li><a href="/usage/other_features/customizing_homepage.html">Customizing Zeppelin Homepage</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Setup<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Basics</span></li>
+                <li><a href="/setup/basics/how_to_build.html">How to Build Zeppelin</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Deployment</span></li>
+                <li><a href="/setup/deployment/yarn_install.html">Submarine on Yarn</a></li>
+                <li><a href="/setup/deployment/docker.html">Submarine on Docker</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Operation</span></li>
+                <li><a href="/setup/operation/configuration.html">Configuration</a></li>
+                <li><a href="/setup/operation/proxy_setting.html">Proxy Setting</a></li>
+                <li><a href="/setup/operation/upgrading.html">Upgrading</a></li>
+                <li><a href="/setup/operation/trouble_shooting.html">Trouble Shooting</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Ecosystem <b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Ecosystem</span></li>
+                <li><a href="/usage/ecosystem/overview.html">Overview</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/ecosystem/zeppelin.html">Zeppelin</a></li>
+                <li><a href="/ecosystem/jdbc.html">JDBC</a></li>
+                <li><a href="/ecosystem/python.html">Python</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">More<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu" style="right: 0; left: auto;">
+                <li class="title"><span>Extending Submarine</span></li>
+                <li><a href="/development/writing_zeppelin_interpreter.html">Writing Submarine Interpreter</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Contributing to Zeppelin</span></li>
+                <li><a href="/setup/basics/how_to_build.html">How to Build Zeppelin</a></li>
+                <li><a href="/development/contribution/useful_developer_tools.html">Useful Developer Tools</a></li>
+                <li><a href="/development/contribution/how_to_contribute_code.html">How to Contribute (code)</a></li>
+                <li><a href="/development/contribution/how_to_contribute_website.html">How to Contribute (website)</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>External Resources</span></li>
+                <li><a target="_blank" href="">Mailing List</a></li>
+                <li><a target="_blank" href="">Apache Submarine Wiki</a></li>
+                <li><a target="_blank" href="">Stackoverflow Questions about Zeppelin</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/search.html" class="nav-search-link">
+                <span class="fa fa-search nav-search-icon"></span>
+              </a>
+            </li>
+          </ul>
+        </nav><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+
+
+    <div class="content">
+      
+<!--<div class="hero-unit Install">
+  <h1></h1>
+</div>
+-->
+
+<div class="row">
+  <div class="col-md-12">
+    <!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<h1>Submarine Integration Zeppelin <a href="zeppelin.html">English version</a></h1>
+
+<p>Hadoop Submarine 是 Hadoop 3.1 版本中最新的机器学习框架子项目。 它允许 Hadoop 支持 Tensorflow，PyTroch，MXNet，Caffe 等各种深度学习框架，进行机器学习算法开发，分布式模型训练，模型管理和模型发布提供了全功能的系统框架，并结合了hadoop的内在数据存储和数据处理功能使数据科学家能够更好地挖掘和获取数据的价值。</p>
+
+<p>深度学习算法项目需要数据采集，数据处理，数据清理，交互式可视化编程调整参数，算法测试，算法发布，算法作业调度，离线模型训练，模型在线服务等很多处理过程。 Zeppelin 是一款基于 WEB 的 Notebook 支持交互式数据分析。 您可以使用 SQL，Scala，Python 等语法进行交互式的数据开发工作。</p>
+
+<p>您可以使用 zeppelin 中 20 多种解释器（例如：spark，hive，Cassandra，Elasticsearch，Kylin，HBase等）对 Hadoop 中的数据进行数据提取，数据清理，特征提取等数据预处理过程。通过将 Zeppelin 集成到 Submarine 中，我们可以使用 zeppelin 的数据发现，数据分析和数据可视化以及协作功能，完成机器学习模型训练期间的可视化算法开发和参数调整工作。</p>
+
+<h2>Architecture</h2>
+
+<p><img src="/assets/themes/submarine/img/ecosystem/submarine-architecture.png" alt="submarine-architecture"></p>
+
+<p>如上图所示，从系统架构上阐述了 Submarine 如何通过 Zeppelin 进行机器学习算法的开发和模型训练。</p>
+
+<p>在安装部署完 Hadoop 3.1+ 和 Zeppelin 后，Submarine 将为每个用户在 YARN 中创建一个完全独立的 Zeppelin Submarine interpreter Docker 容器，这个容器中包含了 Tensorflow 的开发和运行环境，Zeppelin Server 通过连接 YARN 中的 Zeppelin Submarine interpreter Docker 容器，让算法工程师可以在 Zeppelin Notebook 中进行 Tensorflow 的单机环境下的算法开发和数据可视化展现。</p>
+
+<p>在完成算法开发后，算法工程师可以直接在 Zeppelin 中将算法以 JOB 的方式提交到 YARN 中进行模型的离线分布式训练，通过 Submarine 为每个算法工程师提供的 TensorBoard 进行模型训练的实时展示。</p>
+
+<p>你不仅仅可以完成算法的模型训练，你还可以借助 Zeppelin 中原有的二十多种解释器，完成模型的数据预处理工作，例如：你可以在算法 Note 中通过 Zeppelin 中的 Spark 解释器进行数据抽取、过滤和特征提取等操作。</p>
+
+<p>未来，你还可以借助 Zeppelin 即将发布的 Workflow 工作流编排服务，你可以在一个 Note 中完成 Spark、Hive 的数据处理和 Tensorflow 模型训练，通过可视化等方式编排成一个工作流，在生产环境中进行作业的周期性调度。</p>
+
+<h2>Zeppelin Submarine interpreter</h2>
+
+<p><img src="/assets/themes/submarine/img/ecosystem/submarine-interpreter.png" alt="submarine-architecture"></p>
+
+<p>如上图所示，从内部实现上阐述了 Submarine 如何结合 Zeppelin 进行机器学习算法的开发和模型训练。</p>
+
+<ol>
+<li><p>算法工程师在 Zeppelin 中通过使用 Submarine interpreter 创建一个 Tensorflow 的 notebook（左图）。</p>
+
+<p>需要注意的是你需要在一个 Note 中完成整个算法的开发。</p></li>
+<li><p>你可以在 Note 中的一些段落中使用例如 Spark 进行数据预处理工作。</p></li>
+<li><p>在 notebook 的其他段落中使用 Python 进行 Tensorflow 的算法开发和调试，Submarine 会在 YARN 中为你创建 Zeppelin Submarine Interpreter Docker Container，容器中包含了以下功能和服务：</p></li>
+</ol>
+
+<ul>
+<li><strong>Shell 命令行工具</strong>：让你可以查看 Zeppelin Submarine Interpreter Docker Container 中的系统环境，安装自己需要的扩展工具或是 Python 依赖库。</li>
+<li><strong>Kerberos 库</strong>：让你可以进行 kerberos 认证，访问启用了 Kerberos 认证的 Hadoop 集群。</li>
+<li><strong>Tensorflow 运行环境</strong>：让你可以进行 tensorflow 算法代码的开发。</li>
+<li><strong>Python 运行环境</strong>：让你可以进行 tensorflow 代码的开发。</li>
+<li>在 Zeppelin 中通过一个 Note 来完成一个完整的算法开发，如果这个算法包含了多个模块，你可以在 Note 中通过多个段落分别编写不同的算法模块，每个段落的标题就是算法模块的名称，段落的内容就是这个算法模块的代码内容。</li>
+<li><p><strong>HDFS Client</strong>：Zeppelin Submarine Interpreter 会自动将你在 Note 中编写的算法代码提交到 HDFS 中。</p>
+
+<p><strong>Submarine interpreter Docker Image</strong> 是由 Submarine 为你提供支持 Tensorflow （CPU 和 GPU 版本）的镜像文件，并安装了 Python 常用的算法库，你也可以在 Submarine 提供的基础镜像之上安装你所需要的其他开发依赖库进行使用。</p></li>
+</ul>
+
+<ol>
+<li>当你完成算法模块的开发后，你可以在 Note 中新建一个段落输入 <code>%submarine dashboard</code> 后执行， Zeppelin 将会创建出 Submarine Dashboard ，在控制面板中通过选择 <code>JOB RUN</code> 命令选项就可以将这个 Note 中编写的机器学习算法作为一个 JOB 提交到 YARN 中，创建出 Tensorflow Model Training Docker Container ，容器中包含了以下部分：</li>
+</ol>
+
+<ul>
+<li>Tensorflow 运行环境。</li>
+<li><p>HDFS Client 会自动完成从 HDFS 中下载算法文件 Mount 到容器中进行分布式模型训练，并将算法文件 Mount 到容器的 Work Dir 路径。</p>
+
+<p><strong>Submarine Tensorflow Docker Image</strong> 是有 Submarine 为你提供支持 Tensorflow （CPU 和 GPU 版本）的镜像文件，并安装了 Python 常用的算法库，你也可以在 Submarine 提供的基础镜像之上安装你所需要的其他开发依赖库进行使用。</p></li>
+</ul>
+
+<h3>Submarine shell（Optional）</h3>
+
+<p>在 Zeppelin 中使用 Submarine Interpreter 创建 Note 之后，如果有需要你可以在 Note 中新增段落，使用 <code>%submarine.sh</code> 标识符，你可以使用 Shell 命令对  Submarine Interpreter Docker Container 进行各种操作，例如：</p>
+
+<ol>
+<li>查看 Container 中的 Pythone 版本</li>
+<li>查看 Container 的系统环境</li>
+<li>安装你自己需要的依赖库</li>
+<li>通过 kinit 进行 kerberos 认证</li>
+<li>使用 Container 中的 Hadoop 进行 HDFS 操作等等</li>
+</ol>
+
+<h3>Submarine python</h3>
+
+<p>你可以在 Note 中新增一个或多个段落，使用 <code>%submarine.python</code> 标识符，使用 Python 编写 Tensorflow 的算法模块。</p>
+
+<h3>Submarine Dashboard</h3>
+
+<p>在通过使用 <code>%submarine.python</code> 编写完 Tensorflow 算法后，你可以在 Note 中新增一个段落，输入 <code>%submarine dashboard</code> 并执行，Zeppelin 将会创建出 Submarine 的 Dashboard。</p>
+
+<p><img src="assets/Submarine-Dashboard.gif" alt=""></p>
+
+<p>通过 Submarine Dashboard 你可以完成对 Submarine 的所有操作控制，例如：</p>
+
+<ol>
+<li><p>Usage：显示 Submarine 的命令说明，帮助开发人员进行问题定位。</p></li>
+<li><p>Refresh：Zeppelin 将会清除你在 Dashboard 中的所有输入内容。</p></li>
+<li><p>Tensorboard：将会跳转到 Submarine 为每个用户创建的 Tensorboard WEB 系统，通过 Tensorboard 你可以实时查看 Tensorflow 模型训练的实时状态。</p></li>
+<li><p>Command</p></li>
+</ol>
+
+<ul>
+<li><p>JOB RUN：选择 <code>JOB RUN</code> 将会显示提交 JOB 的参数输入界面</p>
+
+<table><thead>
+<tr>
+<th>参数名称</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Checkpoint Path</td>
+<td>Submarine 为每个用户的每个 Note 设置了一个单独的 Tensorflow 训练的 Checkpoint 路径，保存了这个 Note 历史的训练数据，用于训练模型数据的输出，Tensorboard 使用这个路径中的数据进行模型展示，用户不可修改。例如：<code>hdfs://cluster1/...</code> ，Checkpoint Path 的环境变量名称是 <code>%checkpoint_path%</code>，你可以在 <code>PS Launch Cmd</code> 和 <code>Worker Launch Cmd</code> 中直接使用 <code>%checkpoint_path%</code> 代替在 Checkpoint Path 中的输入值</td>
+</tr>
+<tr>
+<td>Data Path</td>
+<td>用户指定 Tensorflow 算法的数据数据目录，只支持 HDFS 的目录。Data Path 的环境变量名称是 <code>%input_path%</code>，你可以在 <code>PS Launch Cmd</code> 和 <code>Worker Launch Cmd</code> 中直接使用 <code>%input_path%</code> 代替在 Data Path 中的输入值</td>
+</tr>
+<tr>
+<td>PS Launch Cmd</td>
+<td>Tensorflow Parameter services launch command，例如：<code>python cifar10_main.py --data-dir=%input_path% --job-dir=%checkpoint_path% --num-gpus=0 ...</code></td>
+</tr>
+<tr>
+<td>Worker Launch Cmd</td>
+<td>Tensorflow Worker services launch command，例如：<code>python cifar10_main.py --data-dir=%input_path% --job-dir=%checkpoint_path% --num-gpus=1 ...</code></td>
+</tr>
+</tbody></table></li>
+<li><p>JOB STOP</p>
+
+<p>你可以选择执行 <code>JOB STOP</code> 命令，停止一个已经提交和正在运行的 Tensorflow 模型训练任务</p></li>
+<li><p>TENSORBOARD START</p>
+
+<p>你可以选择执行 <code>TENSORBOARD START</code> 命令，创建你的 TENSORBOARD Docker Container。</p></li>
+<li><p>TENSORBOARD STOP</p>
+
+<p>你可以选择执行 <code>TENSORBOARD STOP</code> 命令，停止并销毁你的 TENSORBOARD Docker Container。</p></li>
+</ul>
+
+<ol>
+<li>Run Command：执行你所选择的操作命令</li>
+<li>Clean Chechkpoint：勾选上这个选项，在每次执行 <code>JOB RUN</code> 之前，将会清除这个 Note 的 Checkpoint Path 中的数据。</li>
+</ol>
+
+<h3>Submarine interpreter Attributes</h3>
+
+<p>Zeppelin Submarine interpreter 提供了以下属性对 Submarine 解释器进行定制</p>
+
+<table><thead>
+<tr>
+<th>属性名</th>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>DOCKER_HADOOP_HDFS_HOME</code></td>
+<td>例如：/hadoop-3.1</td>
+<td>在以下3个镜像中的 Hadoop 路径（SUBMARINE<em>INTERPRETER</em>DOCKER_IMAGE、tf.parameter.services.docker.image、tf.worker.services.docker.image）</td>
+</tr>
+<tr>
+<td><code>DOCKER_JAVA_HOME</code></td>
+<td>例如：/opt/java</td>
+<td>在以下3个镜像中的 JAVA 路径（SUBMARINE<em>INTERPRETER</em>DOCKER_IMAGE、tf.parameter.services.docker.image、tf.worker.services.docker.image）</td>
+</tr>
+<tr>
+<td><code>HADOOP_YARN_SUBMARINE_JAR</code></td>
+<td></td>
+<td>在 Zeppelin 服务器中安装的 Hadoop-3.1+ 版本中的 Submarine JAR 包的路径</td>
+</tr>
+<tr>
+<td><code>INTERPRETER_LAUNCH_MODE</code></td>
+<td>local/yarn</td>
+<td>将 Submarine 解释器实例运行在 local 或 YARN 中 local 主要用于 submarine interpreter 的开发和调试 YARN 模式用于生产环境</td>
+</tr>
+<tr>
+<td><code>SUBMARINE_HADOOP_CONF_DIR</code></td>
+<td></td>
+<td>设置 HADOOP-CONF 路径，可以用于支持多个hadoop 集群环境的情况</td>
+</tr>
+<tr>
+<td><code>SUBMARINE_HADOOP_HOME</code></td>
+<td></td>
+<td>在 Zeppelin 服务器中安装的 Hadoop-3.1+ 以上版本路径</td>
+</tr>
+<tr>
+<td><code>SUBMARINE_HADOOP_KEYTAB</code></td>
+<td></td>
+<td>用于开启了 kerberos 认证的 hadoop 集群的 keytab 文件路径</td>
+</tr>
+<tr>
+<td><code>SUBMARINE_HADOOP_PRINCIPAL</code></td>
+<td></td>
+<td>用于开启了 kerberos 认证的 hadoop 集群的 keytab 文件的 PRINCIPAL 信息</td>
+</tr>
+<tr>
+<td><code>SUBMARINE_INTERPRETER_DOCKER_IMAGE</code></td>
+<td></td>
+<td>在 INTERPRETER<em>LAUNCH</em>MODE=yarn 时，Submarine 会使用这个镜像创建 Zeppelin Submarine interpreter 容器为用户创建算法开发环境</td>
+</tr>
+<tr>
+<td><code>docker.container.network</code></td>
+<td></td>
+<td>YARN 的 Docker 网络名称</td>
+</tr>
+<tr>
+<td><code>machinelearing.distributed.enable</code></td>
+<td></td>
+<td>是否使用分布式模式 JOB RUN 提交的模型训练</td>
+</tr>
+<tr>
+<td><code>shell.command.timeout.millisecs</code></td>
+<td>60000</td>
+<td>在 Submarine interpreter 容器中执行 Shell 命令的超时设置</td>
+</tr>
+<tr>
+<td><code>submarine.algorithm.hdfs.path</code></td>
+<td></td>
+<td>将使用 Submarine interpreter 开发的机器学习算法以文件的方式保存到 HDFS 中</td>
+</tr>
+<tr>
+<td><code>submarine.yarn.queue</code></td>
+<td>root.default</td>
+<td>Submarine 提交模型训练的 YARN 队列名称</td>
+</tr>
+<tr>
+<td><code>tf.checkpoint.path</code></td>
+<td></td>
+<td>Tensorflow checkpoint 路径，每个用户都会在这个路径下使用用户名创建用户的 checkpoint 二级路径，用户提交的每个算法都会使用note id 创建checkpoint 三级路径（用户的 Tensorboard 使用这个路径里的 checkpoint 数据进行可视化展示）</td>
+</tr>
+<tr>
+<td><code>tf.parameter.services.cpu</code></td>
+<td></td>
+<td>Submarine 提交模型分布式训练时为 Tensorflow parameter services 申请的 CPU 核数</td>
+</tr>
+<tr>
+<td><code>tf.parameter.services.docker.image</code></td>
+<td></td>
+<td>Submarine 提交模型分布式训练时创建 Tensorflow parameter services 使用的镜像</td>
+</tr>
+<tr>
+<td><code>tf.parameter.services.gpu</code></td>
+<td></td>
+<td>Submarine 提交模型分布式训练时为 Tensorflow parameter services 申请的 GPU 核数</td>
+</tr>
+<tr>
+<td><code>tf.parameter.services.memory</code></td>
+<td>2G</td>
+<td>Submarine 提交模型分布式训练时为 Tensorflow parameter services 申请的 Memory 资源</td>
+</tr>
+<tr>
+<td><code>tf.parameter.services.num</code></td>
+<td></td>
+<td>Submarine 提交模型分布式训练时使用的 Tensorflow parameter services 数目</td>
+</tr>
+<tr>
+<td><code>tf.tensorboard.enable</code></td>
+<td>true</td>
+<td>为每个用户创建一个独立的 Tensorboard</td>
+</tr>
+<tr>
+<td><code>tf.worker.services.cpu</code></td>
+<td></td>
+<td>Submarine 提交模型训练时为 Tensorflow worker services 申请的 CPU 资源</td>
+</tr>
+<tr>
+<td><code>tf.worker.services.docker.image</code></td>
+<td></td>
+<td>Submarine 提交模型分布式训练时创建 Tensorflow worker services 使用的镜像</td>
+</tr>
+<tr>
+<td><code>tf.worker.services.gpu</code></td>
+<td></td>
+<td>Submarine 提交模型训练时为 Tensorflow worker services 申请的 GPU 资源</td>
+</tr>
+<tr>
+<td><code>tf.worker.services.memory</code></td>
+<td></td>
+<td>Submarine 提交模型训练时为 Tensorflow worker services 申请的 CPU 资源</td>
+</tr>
+<tr>
+<td><code>tf.worker.services.num</code></td>
+<td></td>
+<td>Submarine 提交模型分布式训练时使用的 Tensorflow worker services 数目</td>
+</tr>
+<tr>
+<td><code>yarn.webapp.http.address</code></td>
+<td>例如：http://hadoop-3-1:8088</td>
+<td>YARN web ui address</td>
+</tr>
+<tr>
+<td><code>zeppelin.interpreter.rpc.portRange</code></td>
+<td>29914</td>
+<td>需要在 SUBMARINE<em>INTERPRETER</em>DOCKER_IMAGE 配置的镜像中 export 这个端口，用于 Zeppelin Server 和 Submarine interpreter 容器进行 RPC 通讯</td>
+</tr>
+<tr>
+<td><code>zeppelin.ipython.grpc.message_size</code></td>
+<td>33554432</td>
+<td>Submarine interpreter 容器中 IPython grpc 的消息大小设置</td>
+</tr>
+<tr>
+<td><code>zeppelin.ipython.launch.timeout</code></td>
+<td>30000</td>
+<td>Submarine interpreter 容器中 IPython 执行超时设置</td>
+</tr>
+<tr>
+<td><code>zeppelin.python</code></td>
+<td>python</td>
+<td>Submarine interpreter 容器中 python 的执行路径</td>
+</tr>
+<tr>
+<td><code>zeppelin.python.maxResult</code></td>
+<td>10000</td>
+<td>从 Submarine interpreter 容器中返回 python 执行结果的最大条数</td>
+</tr>
+<tr>
+<td><code>zeppelin.python.useIPython</code></td>
+<td>false</td>
+<td>目前不支持IPython，必须为false</td>
+</tr>
+<tr>
+<td><code>zeppelin.submarine.auth.type</code></td>
+<td>simple/kerberos</td>
+<td>Hadoop 是否开启了 kerberos 认证</td>
+</tr>
+</tbody></table>
+
+<h2>更多介绍</h2>
+
+<p>Youtube Submarine Channel：<a href="https://www.youtube.com/channel/UC4JBt8Y8VJ0BW0IM9YpdCyQ">https://www.youtube.com/channel/UC4JBt8Y8VJ0BW0IM9YpdCyQ</a></p>
+
+  </div>
+</div>
+
+
+      <hr>
+      <footer>
+        <!-- <p>&copy; 2019 The Apache Software Foundation</p>-->
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
+

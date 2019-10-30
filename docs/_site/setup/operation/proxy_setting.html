@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Apache Submarine 0.3.0 Documentation: Proxy Setting in Apache Submarine</title>
+    <meta name="description" content="Apache Submarine supports Helium plugins which fetch required installer packages from remote registry/repositories">
+    <meta name="author" content="The Apache Software Foundation">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le styles -->
+    <link href="/assets/themes/submarine/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/submarine/css/style.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/submarine/css/syntax.css" rel="stylesheet"  type="text/css" media="screen" /> 
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/assets/themes/submarine/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/themes/submarine/js/docs.js"></script>
+    <script src="/assets/themes/submarine/js/anchor.min.js"></script>
+    <script src="/assets/themes/submarine/js/toc.js"></script>
+    <script src="/assets/themes/submarine/js/lunr.min.js"></script>
+    <script src="/assets/themes/submarine/js/search.js"></script>    
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+  </head>
+
+  <body>
+    
+        <div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a class="navbar-brand-main" href="http://submarine.apache.org">
+              <img src="/assets/themes/submarine/img/submarine_white_logo.png" width="85"
+                   style="margin-top: -2px;" alt="Apache Submarine">
+              <span style="margin-left: 5px; font-size: 27px;">Submarine</span>
+              <a class="navbar-brand-version" href=""
+                 style="font-size: 15px; color: white;"> 0.3.0
+              </a>
+            </a>
+          </div>
+        </div>
+        <nav class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Quick Start <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="title"><span>Getting Started</span></li>
+                <li><a href="/quickstart/index.html">Quick Start Guide</a></li>
+                <li><a href="/quickstart/install.html">Install Submarine</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/quickstart/tensorflow_with_submarine.html">Tensorflow with Submarine</a></li>
+                <li><a href="/quickstart/pytorch_with_submarine.html">PyTorch with Submarine</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Usage<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Interpreter</span></li>
+                <li><a href="/usage/interpreter/overview.html">Overview</a></li>
+                <li><a href="/usage/interpreter/interpreter_binding_mode.html">Interpreter Binding Mode</a></li>
+                <li><a href="/usage/interpreter/user_impersonation.html">User Impersonation</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>REST API</span></li>
+                <li><a href="/usage/rest_api/submarine_server.html">Submarine Server API</a></li>
+                <li><a href="/usage/rest_api/configuration.html">Configuration API</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Other Features</span></li>
+                <li><a href="/usage/other_features/publishing_paragraphs.html">Publishing Paragraphs</a></li>
+                <li><a href="/usage/other_features/personalized_mode.html">Personalized Mode</a></li>
+                <li><a href="/usage/other_features/customizing_homepage.html">Customizing Zeppelin Homepage</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Setup<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Basics</span></li>
+                <li><a href="/setup/basics/how_to_build.html">How to Build Zeppelin</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Deployment</span></li>
+                <li><a href="/setup/deployment/yarn_install.html">Submarine on Yarn</a></li>
+                <li><a href="/setup/deployment/docker.html">Submarine on Docker</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Operation</span></li>
+                <li><a href="/setup/operation/configuration.html">Configuration</a></li>
+                <li><a href="/setup/operation/proxy_setting.html">Proxy Setting</a></li>
+                <li><a href="/setup/operation/upgrading.html">Upgrading</a></li>
+                <li><a href="/setup/operation/trouble_shooting.html">Trouble Shooting</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Ecosystem <b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Ecosystem</span></li>
+                <li><a href="/usage/ecosystem/overview.html">Overview</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/ecosystem/zeppelin.html">Zeppelin</a></li>
+                <li><a href="/ecosystem/jdbc.html">JDBC</a></li>
+                <li><a href="/ecosystem/python.html">Python</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">More<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu" style="right: 0; left: auto;">
+                <li class="title"><span>Extending Submarine</span></li>
+                <li><a href="/development/writing_zeppelin_interpreter.html">Writing Submarine Interpreter</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Contributing to Zeppelin</span></li>
+                <li><a href="/setup/basics/how_to_build.html">How to Build Zeppelin</a></li>
+                <li><a href="/development/contribution/useful_developer_tools.html">Useful Developer Tools</a></li>
+                <li><a href="/development/contribution/how_to_contribute_code.html">How to Contribute (code)</a></li>
+                <li><a href="/development/contribution/how_to_contribute_website.html">How to Contribute (website)</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>External Resources</span></li>
+                <li><a target="_blank" href="">Mailing List</a></li>
+                <li><a target="_blank" href="">Apache Submarine Wiki</a></li>
+                <li><a target="_blank" href="">Stackoverflow Questions about Zeppelin</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/search.html" class="nav-search-link">
+                <span class="fa fa-search nav-search-icon"></span>
+              </a>
+            </li>
+          </ul>
+        </nav><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+
+
+    <div class="content">
+      
+<!--<div class="hero-unit Proxy Setting in Apache Submarine">
+  <h1></h1>
+</div>
+-->
+
+<div class="row">
+  <div class="col-md-12">
+    <!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<h1>Proxy Setting</h1>
+
+<div id="toc"></div>
+
+<h2>How to Configure Proxies?</h2>
+
+<p>Set <code>http_proxy</code> and <code>https_proxy</code> env variables. (See <a href="https://wiki.archlinux.org/index.php/proxy_settings">more</a>)</p>
+
+<p>Currently, Proxy is supported only for these features.</p>
+
+<ul>
+<li>Helium: downloading <code>helium.json</code>, installing <code>npm</code>, <code>node</code>, <code>yarn</code></li>
+</ul>
+
+  </div>
+</div>
+
+
+      <hr>
+      <footer>
+        <!-- <p>&copy; 2019 The Apache Software Foundation</p>-->
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
+

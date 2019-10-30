@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Apache Submarine 0.3.0 Documentation: Install</title>
+    <meta name="description" content="This page will help you get started and will guide you through installing Apache Submarine and running it in the command line.">
+    <meta name="author" content="The Apache Software Foundation">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le styles -->
+    <link href="/assets/themes/submarine/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/submarine/css/style.css?body=1" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/submarine/css/syntax.css" rel="stylesheet"  type="text/css" media="screen" /> 
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/assets/themes/submarine/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/themes/submarine/js/docs.js"></script>
+    <script src="/assets/themes/submarine/js/anchor.min.js"></script>
+    <script src="/assets/themes/submarine/js/toc.js"></script>
+    <script src="/assets/themes/submarine/js/lunr.min.js"></script>
+    <script src="/assets/themes/submarine/js/search.js"></script>    
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+  </head>
+
+  <body>
+    
+        <div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            <a class="navbar-brand-main" href="http://submarine.apache.org">
+              <img src="/assets/themes/submarine/img/submarine_white_logo.png" width="85"
+                   style="margin-top: -2px;" alt="Apache Submarine">
+              <span style="margin-left: 5px; font-size: 27px;">Submarine</span>
+              <a class="navbar-brand-version" href=""
+                 style="font-size: 15px; color: white;"> 0.3.0
+              </a>
+            </a>
+          </div>
+        </div>
+        <nav class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Quick Start <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="title"><span>Getting Started</span></li>
+                <li><a href="/quickstart/index.html">Quick Start Guide</a></li>
+                <li><a href="/quickstart/install.html">Install Submarine</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/quickstart/tensorflow_with_submarine.html">Tensorflow with Submarine</a></li>
+                <li><a href="/quickstart/pytorch_with_submarine.html">PyTorch with Submarine</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Usage<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Interpreter</span></li>
+                <li><a href="/usage/interpreter/overview.html">Overview</a></li>
+                <li><a href="/usage/interpreter/interpreter_binding_mode.html">Interpreter Binding Mode</a></li>
+                <li><a href="/usage/interpreter/user_impersonation.html">User Impersonation</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>REST API</span></li>
+                <li><a href="/usage/rest_api/submarine_server.html">Submarine Server API</a></li>
+                <li><a href="/usage/rest_api/configuration.html">Configuration API</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Other Features</span></li>
+                <li><a href="/usage/other_features/publishing_paragraphs.html">Publishing Paragraphs</a></li>
+                <li><a href="/usage/other_features/personalized_mode.html">Personalized Mode</a></li>
+                <li><a href="/usage/other_features/customizing_homepage.html">Customizing Zeppelin Homepage</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Setup<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Basics</span></li>
+                <li><a href="/setup/basics/how_to_build.html">How to Build Zeppelin</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Deployment</span></li>
+                <li><a href="/setup/deployment/yarn_install.html">Submarine on Yarn</a></li>
+                <li><a href="/setup/deployment/docker.html">Submarine on Docker</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Operation</span></li>
+                <li><a href="/setup/operation/configuration.html">Configuration</a></li>
+                <li><a href="/setup/operation/proxy_setting.html">Proxy Setting</a></li>
+                <li><a href="/setup/operation/upgrading.html">Upgrading</a></li>
+                <li><a href="/setup/operation/trouble_shooting.html">Trouble Shooting</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Ecosystem <b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu">
+                <li class="title"><span>Ecosystem</span></li>
+                <li><a href="/usage/ecosystem/overview.html">Overview</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/ecosystem/zeppelin.html">Zeppelin</a></li>
+                <li><a href="/ecosystem/jdbc.html">JDBC</a></li>
+                <li><a href="/ecosystem/python.html">Python</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">More<b class="caret"></b></a>
+              <ul class="dropdown-menu scrollable-menu" style="right: 0; left: auto;">
+                <li class="title"><span>Extending Submarine</span></li>
+                <li><a href="/development/writing_zeppelin_interpreter.html">Writing Submarine Interpreter</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>Contributing to Zeppelin</span></li>
+                <li><a href="/setup/basics/how_to_build.html">How to Build Zeppelin</a></li>
+                <li><a href="/development/contribution/useful_developer_tools.html">Useful Developer Tools</a></li>
+                <li><a href="/development/contribution/how_to_contribute_code.html">How to Contribute (code)</a></li>
+                <li><a href="/development/contribution/how_to_contribute_website.html">How to Contribute (website)</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="title"><span>External Resources</span></li>
+                <li><a target="_blank" href="">Mailing List</a></li>
+                <li><a target="_blank" href="">Apache Submarine Wiki</a></li>
+                <li><a target="_blank" href="">Stackoverflow Questions about Zeppelin</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/search.html" class="nav-search-link">
+                <span class="fa fa-search nav-search-icon"></span>
+              </a>
+            </li>
+          </ul>
+        </nav><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+
+
+    <div class="content">
+      
+<!--<div class="hero-unit Install">
+  <h1></h1>
+</div>
+-->
+
+<div class="row">
+  <div class="col-md-12">
+    <!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<h1>Submarine Installation Guide</h1>
+
+<h2>Prerequisites</h2>
+
+<p>(Please note that all following prerequisites are just an example for you to install. You can always choose to install your own version of kernel, different users, different drivers, etc.).</p>
+
+<h3>Operating System</h3>
+
+<p>The operating system and kernel versions we have tested are as shown in the following table, which is the recommneded minimum required versions.</p>
+
+<table><thead>
+<tr>
+<th>Enviroment</th>
+<th>Verion</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Operating System</td>
+<td>centos-release-7-3.1611.el7.centos.x86_64</td>
+</tr>
+<tr>
+<td>Kernal</td>
+<td>3.10.0-514.el7.x86_64</td>
+</tr>
+</tbody></table>
+
+<h3>User &amp; Group</h3>
+
+<p>As there are some specific users and groups recommended to be created to install hadoop/docker. Please create them if they are missing.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">adduser hdfs
+adduser mapred
+adduser yarn
+addgroup hadoop
+usermod -aG hdfs,hadoop hdfs
+usermod -aG mapred,hadoop mapred
+usermod -aG yarn,hadoop yarn
+usermod -aG hdfs,hadoop hadoop
+groupadd docker
+usermod -aG docker yarn
+usermod -aG docker hadoop
+</code></pre></div>
+<h3>GCC Version</h3>
+
+<p>Check the version of GCC tool (to compile kernel).</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">gcc --version
+gcc <span class="o">(</span>GCC<span class="o">)</span> 4.8.5 20150623 <span class="o">(</span>Red Hat 4.8.5-11<span class="o">)</span>
+<span class="c"># install if needed</span>
+yum install gcc make g++
+</code></pre></div>
+<h3>Kernel header &amp; Kernel devel</h3>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># Approach 1：</span>
+yum install kernel-devel-<span class="k">$(</span>uname -r<span class="k">)</span> kernel-headers-<span class="k">$(</span>uname -r<span class="k">)</span>
+<span class="c"># Approach 2：</span>
+wget http://vault.centos.org/7.3.1611/os/x86_64/Packages/kernel-headers-3.10.0-514.el7.x86_64.rpm
+rpm -ivh kernel-headers-3.10.0-514.el7.x86_64.rpm
+</code></pre></div>
+<h3>GPU Servers (Only for Nvidia GPU equipped nodes)</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">lspci | grep -i nvidia
+
+# If the server has gpus, you can get info like this：
+04:00.0 3D controller: NVIDIA Corporation Device 1b38 (rev a1)
+82:00.0 3D controller: NVIDIA Corporation Device 1b38 (rev a1)
+</code></pre></div>
+<h3>Nvidia Driver Installation (Only for Nvidia GPU equipped nodes)</h3>
+
+<p>To make a clean installation, if you have requirements to upgrade GPU drivers. If nvidia driver/cuda has been installed before, They should be uninstalled firstly.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text"># uninstall cuda：
+sudo /usr/local/cuda-10.0/bin/uninstall_cuda_10.0.pl
+
+# uninstall nvidia-driver：
+sudo /usr/bin/nvidia-uninstall
+</code></pre></div>
+<p>To check GPU version, install nvidia-detect</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">yum install nvidia-detect
+# run &#39;nvidia-detect -v&#39; to get reqired nvidia driver version：
+nvidia-detect -v
+Probing for supported NVIDIA devices...
+[10de:13bb] NVIDIA Corporation GM107GL [Quadro K620]
+This device requires the current xyz.nm NVIDIA driver kmod-nvidia
+[8086:1912] Intel Corporation HD Graphics 530
+An Intel display controller was also detected
+</code></pre></div>
+<p>Pay attention to <code>This device requires the current xyz.nm NVIDIA driver kmod-nvidia</code>.
+Download the installer like <a href="https://www.nvidia.com/object/linux-amd64-display-archive.html">NVIDIA-Linux-x86_64-390.87.run</a>.</p>
+
+<p>Some preparatory work for nvidia driver installation. (This is follow normal Nvidia GPU driver installation, just put here for your convenience)</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text"># It may take a while to update
+yum -y update
+yum -y install kernel-devel
+
+yum -y install epel-release
+yum -y install dkms
+
+# Disable nouveau
+vim /etc/default/grub
+# Add the following configuration in “GRUB_CMDLINE_LINUX” part
+rd.driver.blacklist=nouveau nouveau.modeset=0
+
+# Generate configuration
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+vim /etc/modprobe.d/blacklist.conf
+# Add confiuration:
+blacklist nouveau
+
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+dracut /boot/initramfs-$(uname -r).img $(uname -r)
+reboot
+</code></pre></div>
+<p>Check whether nouveau is disabled</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">lsmod | grep nouveau  # return null
+
+# install nvidia driver
+sh NVIDIA-Linux-x86_64-390.87.run
+</code></pre></div>
+<p>Some options during the installation</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Install NVIDIA&#39;s 32-bit compatibility libraries (Yes)
+centos Install NVIDIA&#39;s 32-bit compatibility libraries (Yes)
+Would you like to run the nvidia-xconfig utility to automatically update your X configuration file... (NO)
+</code></pre></div>
+<p>Check nvidia driver installation</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">nvidia-smi
+</code></pre></div>
+<p>Reference：
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html</p>
+
+<h3>Docker Installation</h3>
+
+<p>We recommend to use Docker version &gt;= 1.12.5, following steps are just for your reference. You can always to choose other approaches to install Docker.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">yum -y update
+yum -y install yum-utils
+yum-config-manager --add-repo https://yum.dockerproject.org/repo/main/centos/7
+yum -y update
+
+# Show available packages
+yum search --showduplicates docker-engine
+
+# Install docker 1.12.5
+yum -y --nogpgcheck install docker-engine-1.12.5*
+systemctl start docker
+
+chown hadoop:netease /var/run/docker.sock
+chown hadoop:netease /usr/bin/docker
+</code></pre></div>
+<p>Reference：https://docs.docker.com/cs-engine/1.12/</p>
+
+<h3>Docker Configuration</h3>
+
+<p>Add a file, named daemon.json, under the path of /etc/docker/. Please replace the variables of image<em>registry</em>ip, etcd<em>host</em>ip, localhost<em>ip, yarn</em>dns<em>registry</em>host<em>ip, dns</em>host_ip with specific ips according to your environments.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">{
+    &quot;insecure-registries&quot;: [&quot;${image_registry_ip}:5000&quot;],
+    &quot;cluster-store&quot;:&quot;etcd://${etcd_host_ip1}:2379,${etcd_host_ip2}:2379,${etcd_host_ip3}:2379&quot;,
+    &quot;cluster-advertise&quot;:&quot;{localhost_ip}:2375&quot;,
+    &quot;dns&quot;: [&quot;${yarn_dns_registry_host_ip}&quot;, &quot;${dns_host_ip1}&quot;],
+    &quot;hosts&quot;: [&quot;tcp://{localhost_ip}:2375&quot;, &quot;unix:///var/run/docker.sock&quot;]
+}
+</code></pre></div>
+<p>Restart docker daemon：</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo systemctl restart docker
+</code></pre></div>
+<h3>Docker EE version</h3>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>docker version
+
+Client:
+ Version:      1.12.5
+ API version:  1.24
+ Go version:   go1.6.4
+ Git commit:   7392c3b
+ Built:        Fri Dec 16 02:23:59 2016
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      1.12.5
+ API version:  1.24
+ Go version:   go1.6.4
+ Git commit:   7392c3b
+ Built:        Fri Dec 16 02:23:59 2016
+ OS/Arch:      linux/amd64
+</code></pre></div>
+<h3>Nvidia-docker Installation (Only for Nvidia GPU equipped nodes)</h3>
+
+<p>Submarine depends on nvidia-docker 1.0 version</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker-1.0.1-1.x86_64.rpm
+sudo rpm -i /tmp/nvidia-docker*.rpm
+# Start nvidia-docker
+sudo systemctl start nvidia-docker
+
+# Check nvidia-docker status：
+systemctl status nvidia-docker
+
+# Check nvidia-docker log：
+journalctl -u nvidia-docker
+
+# Test nvidia-docker-plugin
+curl http://localhost:3476/v1.0/docker/cli
+</code></pre></div>
+<p>According to <code>nvidia-driver</code> version, add folders under the path of  <code>/var/lib/nvidia-docker/volumes/nvidia_driver/</code></p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">mkdir /var/lib/nvidia-docker/volumes/nvidia_driver/390.87
+# 390.8 is nvidia driver version
+
+mkdir /var/lib/nvidia-docker/volumes/nvidia_driver/390.87/bin
+mkdir /var/lib/nvidia-docker/volumes/nvidia_driver/390.87/lib64
+
+cp /usr/bin/nvidia* /var/lib/nvidia-docker/volumes/nvidia_driver/390.87/bin
+cp /usr/lib64/libcuda* /var/lib/nvidia-docker/volumes/nvidia_driver/390.87/lib64
+cp /usr/lib64/libnvidia* /var/lib/nvidia-docker/volumes/nvidia_driver/390.87/lib64
+
+# Test with nvidia-smi
+nvidia-docker run --rm nvidia/cuda:9.0-devel nvidia-smi
+</code></pre></div>
+<p>Test docker, nvidia-docker, nvidia-driver installation</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text"># Test 1
+nvidia-docker run -rm nvidia/cuda nvidia-smi
+</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text"># Test 2
+nvidia-docker run -it tensorflow/tensorflow:1.9.0-gpu bash
+# In docker container
+python
+import tensorflow as tf
+tf.test.is_gpu_available()
+</code></pre></div>
+<p><a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0">The way to uninstall nvidia-docker 1.0</a>)</p>
+
+<p>Reference:
+https://github.com/NVIDIA/nvidia-docker/tree/1.0</p>
+
+<h3>Tensorflow Image</h3>
+
+<p>There is no need to install CUDNN and CUDA on the servers, because CUDNN and CUDA can be added in the docker images. we can get basic docker images by following WriteDockerfile.md.</p>
+
+<p>The basic Dockerfile doesn&#39;t support kerberos security. if you need kerberos, you can get write a Dockerfile like this</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+
+<span class="c"># Pick up some TF dependencies</span>
+RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install -y --allow-downgrades --no-install-recommends <span class="se">\</span>
+        build-essential <span class="se">\</span>
+        cuda-command-line-tools-9-0 <span class="se">\</span>
+        cuda-cublas-9-0 <span class="se">\</span>
+        cuda-cufft-9-0 <span class="se">\</span>
+        cuda-curand-9-0 <span class="se">\</span>
+        cuda-cusolver-9-0 <span class="se">\</span>
+        cuda-cusparse-9-0 <span class="se">\</span>
+        curl <span class="se">\</span>
+        <span class="nv">libcudnn7</span><span class="o">=</span>7.0.5.15-1+cuda9.0 <span class="se">\</span>
+        libfreetype6-dev <span class="se">\</span>
+        libpng12-dev <span class="se">\</span>
+        libzmq3-dev <span class="se">\</span>
+        pkg-config <span class="se">\</span>
+        python <span class="se">\</span>
+        python-dev <span class="se">\</span>
+        rsync <span class="se">\</span>
+        software-properties-common <span class="se">\</span>
+        unzip <span class="se">\</span>
+        <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    apt-get clean <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    rm -rf /var/lib/apt/lists/*
+
+RUN <span class="nb">export </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive <span class="o">&amp;&amp;</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -yq krb5-user libpam-krb5 <span class="o">&amp;&amp;</span> apt-get clean
+
+RUN curl -O https://bootstrap.pypa.io/get-pip.py <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    python get-pip.py <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    rm get-pip.py
+
+RUN pip --no-cache-dir install <span class="se">\</span>
+        Pillow <span class="se">\</span>
+        h5py <span class="se">\</span>
+        ipykernel <span class="se">\</span>
+        jupyter <span class="se">\</span>
+        matplotlib <span class="se">\</span>
+        numpy <span class="se">\</span>
+        pandas <span class="se">\</span>
+        scipy <span class="se">\</span>
+        sklearn <span class="se">\</span>
+        <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    python -m ipykernel.kernelspec
+
+<span class="c"># Install TensorFlow GPU version.</span>
+RUN pip --no-cache-dir install <span class="se">\</span>
+    http://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.8.0-cp27-none-linux_x86_64.whl
+RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install git -y
+
+RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install -y openjdk-8-jdk wget
+<span class="c"># Downloadhadoop-3.1.1.tar.gz</span>
+RUN wget http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz
+RUN tar zxf hadoop-3.1.1.tar.gz
+RUN mv hadoop-3.1.1 hadoop-3.1.0
+
+<span class="c"># Download jdk which supports kerberos</span>
+RUN wget -qO jdk8.tar.gz <span class="s1">&#39;http://${kerberos_jdk_url}/jdk-8u152-linux-x64.tar.gz&#39;</span>
+RUN tar xzf jdk8.tar.gz -C /opt
+RUN mv /opt/jdk* /opt/java
+RUN rm jdk8.tar.gz
+RUN update-alternatives --install /usr/bin/java java /opt/java/bin/java 100
+RUN update-alternatives --install /usr/bin/javac javac /opt/java/bin/javac 100
+
+ENV JAVA_HOME /opt/java
+ENV PATH <span class="nv">$PATH</span>:<span class="nv">$JAVA_HOME</span>/bin
+</code></pre></div>
+<h3>Test tensorflow in a docker container</h3>
+
+<p>After docker image is built, we can check
+Tensorflow environments before submitting a yarn job.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>docker run -it <span class="k">${</span><span class="nv">docker_image_name</span><span class="k">}</span> /bin/bash
+<span class="c"># &gt;&gt;&gt; In the docker container</span>
+<span class="nv">$ </span>python
+<span class="nv">$ </span>python &gt;&gt; import tensorflow as tf
+<span class="nv">$ </span>python &gt;&gt; tf.__version__
+</code></pre></div>
+<p>If there are some errors, we could check the following configuration.</p>
+
+<ol>
+<li><p>LD<em>LIBRARY</em>PATH environment variable</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">echo $LD_LIBRARY_PATH
+/usr/local/cuda/extras/CUPTI/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+</code></pre></div></li>
+<li><p>The location of libcuda.so.1, libcuda.so</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">ls -l /usr/local/nvidia/lib64 | grep libcuda.so
+</code></pre></div></li>
+</ol>
+
+<h3>Etcd Installation</h3>
+
+<p>etcd is a distributed reliable key-value store for the most critical data of a distributed system, Registration and discovery of services used in containers.
+You can also choose alternatives like zookeeper, Consul.</p>
+
+<p>To install Etcd on specified servers, we can run Submarine-installer/install.sh</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>./Submarine-installer/install.sh
+<span class="c"># Etcd status</span>
+systemctl status Etcd.service
+</code></pre></div>
+<p>Check Etcd cluster health</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="nv">$ </span>etcdctl cluster-health
+member 3adf2673436aa824 is healthy: got healthy result from http://<span class="k">${</span><span class="nv">etcd_host_ip1</span><span class="k">}</span>:2379
+member 85ffe9aafb7745cc is healthy: got healthy result from http://<span class="k">${</span><span class="nv">etcd_host_ip2</span><span class="k">}</span>:2379
+member b3d05464c356441a is healthy: got healthy result from http://<span class="k">${</span><span class="nv">etcd_host_ip3</span><span class="k">}</span>:2379
+cluster is healthy
+
+<span class="nv">$ </span>etcdctl member list
+3adf2673436aa824: <span class="nv">name</span><span class="o">=</span>etcdnode3 <span class="nv">peerURLs</span><span class="o">=</span>http://<span class="k">${</span><span class="nv">etcd_host_ip1</span><span class="k">}</span>:2380 <span class="nv">clientURLs</span><span class="o">=</span>http://<span class="k">${</span><span class="nv">etcd_host_ip1</span><span class="k">}</span>:2379 <span class="nv">isLeader</span><span class="o">=</span><span class="nb">false</span>
+85ffe9aafb7745cc: <span class="nv">name</span><span class="o">=</span>etcdnode2 <span class="nv">peerURLs</span><span class="o">=</span>http://<span class="k">${</span><span class="nv">etcd_host_ip2</span><span class="k">}</span>:2380 <span class="nv">clientURLs</span><span class="o">=</span>http://<span class="k">${</span><span class="nv">etcd_host_ip2</span><span class="k">}</span>:2379 <span class="nv">isLeader</span><span class="o">=</span><span class="nb">false</span>
+b3d05464c356441a: <span class="nv">name</span><span class="o">=</span>etcdnode1 <span class="nv">peerURLs</span><span class="o">=</span>http://<span class="k">${</span><span class="nv">etcd_host_ip3</span><span class="k">}</span>:2380 <span class="nv">clientURLs</span><span class="o">=</span>http://<span class="k">${</span><span class="nv">etcd_host_ip3</span><span class="k">}</span>:2379 <span class="nv">isLeader</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<h3>Calico Installation</h3>
+
+<p>Calico creates and manages a flat three-tier network, and each container is assigned a routable ip. We just add the steps here for your convenience.
+You can also choose alternatives like Flannel, OVS.</p>
+
+<p>To install Calico on specified servers, we can run Submarine-installer/install.sh</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">systemctl start calico-node.service
+systemctl status calico-node.service
+</code></pre></div>
+<h4>Check Calico Network</h4>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># Run the following command to show the all host status in the cluster except localhost.</span>
+<span class="nv">$ </span>calicoctl node status
+Calico process is running.
+
+IPv4 BGP status
++---------------+-------------------+-------+------------+-------------+
+<span class="p">|</span> PEER ADDRESS  <span class="p">|</span>     PEER TYPE     <span class="p">|</span> STATE <span class="p">|</span>   SINCE    <span class="p">|</span>    INFO     <span class="p">|</span>
++---------------+-------------------+-------+------------+-------------+
+<span class="p">|</span> <span class="k">${</span><span class="nv">host_ip1</span><span class="k">}</span> <span class="p">|</span> node-to-node mesh <span class="p">|</span> up    <span class="p">|</span> 2018-09-21 <span class="p">|</span> Established <span class="p">|</span>
+<span class="p">|</span> <span class="k">${</span><span class="nv">host_ip2</span><span class="k">}</span> <span class="p">|</span> node-to-node mesh <span class="p">|</span> up    <span class="p">|</span> 2018-09-21 <span class="p">|</span> Established <span class="p">|</span>
+<span class="p">|</span> <span class="k">${</span><span class="nv">host_ip3</span><span class="k">}</span> <span class="p">|</span> node-to-node mesh <span class="p">|</span> up    <span class="p">|</span> 2018-09-21 <span class="p">|</span> Established <span class="p">|</span>
++---------------+-------------------+-------+------------+-------------+
+
+IPv6 BGP status
+No IPv6 peers found.
+</code></pre></div>
+<p>Create containers to validate calico network</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">docker network create --driver calico --ipam-driver calico-ipam calico-network
+docker run --net calico-network --name workload-A -tid busybox
+docker run --net calico-network --name workload-B -tid busybox
+docker exec workload-A ping workload-B
+</code></pre></div>
+<h2>Hadoop Installation</h2>
+
+<h3>Get Hadoop Release</h3>
+
+<p>You can either get Hadoop release binary or compile from source code. Please follow the https://hadoop.apache.org/ guides.</p>
+
+<h3>Start yarn service</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">YARN_LOGFILE=resourcemanager.log ./sbin/yarn-daemon.sh start resourcemanager
+YARN_LOGFILE=nodemanager.log ./sbin/yarn-daemon.sh start nodemanager
+YARN_LOGFILE=timeline.log ./sbin/yarn-daemon.sh start timelineserver
+YARN_LOGFILE=mr-historyserver.log ./sbin/mr-jobhistory-daemon.sh start historyserver
+</code></pre></div>
+<h3>Start yarn registery dns service</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo YARN_LOGFILE=registrydns.log ./yarn-daemon.sh start registrydns
+</code></pre></div>
+<h3>Test with a MR wordcount job</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">./bin/hadoop jar /home/hadoop/hadoop-current/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.0-SNAPSHOT.jar wordcount /tmp/wordcount.txt /tmp/wordcount-output4
+</code></pre></div>
+<h2>Tensorflow Job with CPU</h2>
+
+<h3>Standalone Mode</h3>
+
+<h4>Clean up apps with the same name</h4>
+
+<p>Suppose we want to submit a tensorflow job named standalone-tf, destroy any application with the same name and clean up historical job directories.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">./bin/yarn app -destroy standalone-tf
+./bin/hdfs dfs -rmr hdfs://<span class="k">${</span><span class="nv">dfs_name_service</span><span class="k">}</span>/tmp/cifar-10-jobdir
+</code></pre></div>
+<p>where ${dfs<em>name</em>service} is the hdfs name service you use</p>
+
+<h4>Run a standalone tensorflow job</h4>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">./bin/yarn jar /home/hadoop/hadoop-current/share/hadoop/yarn/hadoop-yarn-submarine-3.2.0-SNAPSHOT.jar job run <span class="se">\</span>
+ --env <span class="nv">DOCKER_JAVA_HOME</span><span class="o">=</span>/opt/java <span class="se">\</span>
+ --env <span class="nv">DOCKER_HADOOP_HDFS_HOME</span><span class="o">=</span>/hadoop-3.1.0 --name standalone-tf <span class="se">\</span>
+ --docker_image dockerfile-cpu-tf1.8.0-with-models <span class="se">\</span>
+ --input_path hdfs://<span class="k">${</span><span class="nv">dfs_name_service</span><span class="k">}</span>/tmp/cifar-10-data <span class="se">\</span>
+ --checkpoint_path hdfs://<span class="k">${</span><span class="nv">dfs_name_service</span><span class="k">}</span>/user/hadoop/tf-checkpoint <span class="se">\</span>
+ --worker_resources <span class="nv">memory</span><span class="o">=</span>4G,vcores<span class="o">=</span>2 --verbose <span class="se">\</span>
+ --worker_launch_cmd <span class="s2">&quot;python /test/cifar10_estimator/cifar10_main.py --data-dir=hdfs://${dfs_name_service}/tmp/cifar-10-data --job-dir=hdfs://${dfs_name_service}/tmp/cifar-10-jobdir --train-steps=500 --eval-batch-size=16 --train-batch-size=16 --num-gpus=0&quot;</span>
+</code></pre></div>
+<h3>Distributed Mode</h3>
+
+<h4>Clean up apps with the same name</h4>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">./bin/yarn app -destroy distributed-tf
+./bin/hdfs dfs -rmr hdfs://<span class="k">${</span><span class="nv">dfs_name_service</span><span class="k">}</span>/tmp/cifar-10-jobdir
+</code></pre></div>
+<h4>Run a distributed tensorflow job</h4>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">./bin/yarn jar /home/hadoop/hadoop-current/share/hadoop/yarn/hadoop-yarn-submarine-3.2.0-SNAPSHOT.jar job run <span class="se">\</span>
+ --env <span class="nv">DOCKER_JAVA_HOME</span><span class="o">=</span>/opt/java <span class="se">\</span>
+ --env <span class="nv">DOCKER_HADOOP_HDFS_HOME</span><span class="o">=</span>/hadoop-3.1.0 --name distributed-tf <span class="se">\</span>
+ --env <span class="nv">YARN_CONTAINER_RUNTIME_DOCKER_CONTAINER_NETWORK</span><span class="o">=</span>calico-network <span class="se">\</span>
+ --docker_image dockerfile-cpu-tf1.8.0-with-models <span class="se">\</span>
+ --input_path hdfs://<span class="k">${</span><span class="nv">dfs_name_service</span><span class="k">}</span>/tmp/cifar-10-data <span class="se">\</span>
+ --checkpoint_path hdfs://<span class="k">${</span><span class="nv">dfs_name_service</span><span class="k">}</span>/user/hadoop/tf-distributed-checkpoint <span class="se">\</span>
+ --worker_resources <span class="nv">memory</span><span class="o">=</span>4G,vcores<span class="o">=</span>2 --verbose <span class="se">\</span>
+ --num_ps 1 <span class="se">\</span>
+ --ps_resources <span class="nv">memory</span><span class="o">=</span>4G,vcores<span class="o">=</span>2 <span class="se">\</span>
+ --ps_launch_cmd <span class="s2">&quot;python /test/cifar10_estimator/cifar10_main.py --data-dir=hdfs://${dfs_name_service}/tmp/cifar-10-data --job-dir=hdfs://${dfs_name_service}/tmp/cifar-10-jobdir --num-gpus=0&quot;</span> <span class="se">\</span>
+ --num_workers 4 <span class="se">\</span>
+ --worker_launch_cmd <span class="s2">&quot;python /test/cifar10_estimator/cifar10_main.py --data-dir=hdfs://${dfs_name_service}/tmp/cifar-10-data --job-dir=hdfs://${dfs_name_service}/tmp/cifar-10-jobdir --train-steps=500 --eval-batch-size=16 --train-batch-size=16 --sync --num-gpus=0&quot;</span>
+</code></pre></div>
+<h2>Tensorflow Job with GPU</h2>
+
+<h3>GPU configurations for both resourcemanager and nodemanager</h3>
+
+<p>Add the yarn resource configuration file, named resource-types.xml</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">   &lt;configuration&gt;
+     &lt;property&gt;
+       &lt;name&gt;yarn.resource-types&lt;/name&gt;
+       &lt;value&gt;yarn.io/gpu&lt;/value&gt;
+     &lt;/property&gt;
+   &lt;/configuration&gt;
+</code></pre></div>
+<h4>GPU configurations for resourcemanager</h4>
+
+<p>The scheduler used by resourcemanager must be  capacity scheduler, and yarn.scheduler.capacity.resource-calculator in  capacity-scheduler.xml should be DominantResourceCalculator</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">   &lt;configuration&gt;
+     &lt;property&gt;
+       &lt;name&gt;yarn.scheduler.capacity.resource-calculator&lt;/name&gt;
+       &lt;value&gt;org.apache.hadoop.yarn.util.resource.DominantResourceCalculator&lt;/value&gt;
+     &lt;/property&gt;
+   &lt;/configuration&gt;
+</code></pre></div>
+<h4>GPU configurations for nodemanager</h4>
+
+<p>Add configurations in yarn-site.xml</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">   &lt;configuration&gt;
+     &lt;property&gt;
+       &lt;name&gt;yarn.nodemanager.resource-plugins&lt;/name&gt;
+       &lt;value&gt;yarn.io/gpu&lt;/value&gt;
+     &lt;/property&gt;
+   &lt;/configuration&gt;
+</code></pre></div>
+<p>Add configurations in container-executor.cfg</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">   [docker]
+   ...
+   # Add configurations in `[docker]` part：
+   # /usr/bin/nvidia-docker is the path of nvidia-docker command
+   # nvidia_driver_375.26 means that nvidia driver version is &lt;version&gt;. nvidia-smi command can be used to check the version
+   docker.allowed.volume-drivers=/usr/bin/nvidia-docker
+   docker.allowed.devices=/dev/nvidiactl,/dev/nvidia-uvm,/dev/nvidia-uvm-tools,/dev/nvidia1,/dev/nvidia0
+   docker.allowed.ro-mounts=nvidia_driver_&lt;version&gt;
+
+   [gpu]
+   module.enabled=true
+
+   [cgroups]
+   # /sys/fs/cgroup is the cgroup mount destination
+   # /hadoop-yarn is the path yarn creates by default
+   root=/sys/fs/cgroup
+   yarn-hierarchy=/hadoop-yarn
+</code></pre></div>
+  </div>
+</div>
+
+
+      <hr>
+      <footer>
+        <!-- <p>&copy; 2019 The Apache Software Foundation</p>-->
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
+
